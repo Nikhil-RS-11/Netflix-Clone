@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* background-color: black; */
+    color: white;
+}
+
+:root{
+    --select-bg: #161313;
+    --select-border: #616060;
+}
+
+body{
+    background-color: black;
+}
+
+.main{
+    position:relative;
+    
+} 
+
+.bg{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.box{
+    width: 100vw;
+    height: 93vh;
+    position: absolute;
+    top: 0;
+    background-image: url(/assets/bg.jpg);
+    background-position: 50% center;
+    background-repeat: no-repeat;
+    filter: blur(16px);
+    opacity: 0.16;
+}
+
+.gradient{
+    width: 100vw;
+    height: 93vh;
+    position: absolute;
+    top: 0;
+    background: radial-gradient(92.16% 100% at 49.87% 0%, rgba(247, 99, 107, 0.3) 19.86%, rgba(0, 0, 0, 0) 100%);
+    opacity: 75%;
+}
+
+.gradient-2{
+    width: 100vw;
+    height: 93vh;
+    position: absolute;
+    top: 0;
+    background: radial-gradient(50% 100% at 50% 0%, rgba(44, 66, 156, 0.15) 0%, rgba(0, 0, 0, 0) 100%);
+    opacity: 75%;
+}
+
+nav{
+    /* background-color: red; */
+    width: 95vw;
+    margin: auto;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 23px;
+}
+
+.selection{
+    display: flex;
+}
+
+.select{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: var(--select-bg);
+    border-radius: 100px;
+    padding: 5px 10px;
+    border: solid 1px var(--select-border);
+}
+
+select{
+    background-color: var(--select-bg);
+    border: none;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.langlogo{
+    filter: invert(1);
+}
