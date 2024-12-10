@@ -83,7 +83,7 @@ nav{
     padding: 5px 10px;
     border: solid 1px var(--select-border);
 }
-.select::selection{
+.select:active{
     border: solid white 2px;
 }
 
@@ -93,7 +93,7 @@ select{
     font-size: 1rem;
     font-weight: 400;
 }
-select::selection{
+select:active{
     border: none;
 }
 
@@ -109,4 +109,7 @@ select::selection{
     color: black; 
     font-size: 1rem;
     font-weight: 400;
+}
+.signin:hover{
+    background-color: #B9B6B6;
 }
