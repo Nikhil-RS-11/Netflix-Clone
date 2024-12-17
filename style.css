@@ -1,13 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
     /* background-color: black; */
     color: white;
+    /* font-family: "Martel Sans", sans-serif; */
+    /* font-family: "Poppins", serif; */
+    font-style: normal;
 }
 
 :root{
     --select-bg: #161313;
     --select-border: #616060;
+    --button-red: #E50914;
+    --button-hover-red: #C11119;
+
 }
 
 body{
@@ -15,7 +25,14 @@ body{
 }
 
 .main{
-    position:relative;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-image: url(assets/bg.jpg);
+    background-size: max(1980px, 100vw);
+    background-repeat: no-repeat;
+    background-position: center center;
     
 } 
 
@@ -29,37 +46,17 @@ body{
 }
 
 .box{
-    width: 100vw;
-    height: 93vh;
+    width: 100%;
+    height: 100%;
     position: absolute;
+    background-color: black;
     top: 0;
-    background-image: url(assets/bg.jpg);
-    background-position: 50% center;
-    background-repeat: no-repeat;
-    filter: blur(16px);
-    opacity: 0.16;
+    opacity: 0.7;
 }
-
-.gradient{
-    width: 100vw;
-    height: 93vh;
-    position: absolute;
-    top: 0;
-    background: radial-gradient(92.16% 100% at 49.87% 0%, rgba(247, 99, 107, 0.3) 19.86%, rgba(0, 0, 0, 0) 100%);
-    opacity: 75%;
-}
-
-.gradient-2{
-    width: 100vw;
-    height: 93vh;
-    position: absolute;
-    top: 0;
-    background: radial-gradient(50% 100% at 50% 0%, rgba(44, 66, 156, 0.15) 0%, rgba(0, 0, 0, 0) 100%);
-    opacity: 75%;
-}
+    
 
 nav{
-    width: 95vw;
+    width: 62vw;
     margin: auto;
     position: relative;
     z-index: 10;
@@ -72,16 +69,18 @@ nav{
 .selection{
     display: flex;
     gap: 15px;
+    font-family: "Poppins", serif;
 }
 
 .select{
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 4px;
     background-color: var(--select-bg);
-    border-radius: 100px;
-    padding: 5px 10px;
+    border-radius: 3px;
+    padding: 5px 12px;
     border: solid 1px var(--select-border);
+    cursor: pointer;
 }
 .select:active{
     border: solid white 2px;
@@ -92,6 +91,7 @@ select{
     border: none;
     font-size: 1rem;
     font-weight: 400;
+    cursor: pointer;
 }
 select:active{
     border: none;
@@ -102,14 +102,83 @@ select:active{
 }
 
 .signin{
-    background-color: white;
+    background-color: var(--button-red);
     padding: 5px 15px;
-    border-radius: 100px;
+    border-radius: 3px;
     border: none;
-    color: black; 
-    font-size: 1rem;
-    font-weight: 400;
+    color: white; 
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
 }
 .signin:hover{
-    background-color: #B9B6B6;
+    background-color: var(--button-hover-red);
 }
+
+.container{
+    position: relative;
+    z-index: 10;
+    height: 100vh;
+    width: 80vw;
+    color: white;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
+}
+
+.container> :nth-child(1){
+    font-size: 64px;
+    font-weight: 900;
+    gap: 10px;
+    text-align: center;
+    width: 680px;
+}
+.container> :nth-child(2){
+    font-size: 20px;
+    font-weight: 500;
+    padding: 30px;
+}
+.container> :nth-child(3){
+    font-size: 16px;
+    font-weight: 400;
+    padding-bottom: 17px;
+}
+.container> :nth-child(4){
+    display: flex;
+    justify-content: center;
+    width: 664px;
+    height: 72px;
+    gap: 8px;
+}
+
+.getstarted> :nth-child(1){
+    width: 442px;
+    height: 52px;
+    background-color: #161311cc;
+    border: solid 1px #605F5F;
+    border-radius: 4px;
+    font-size: 16px;
+    padding-left: 15px;
+}
+.getstarted> :nth-child(2){
+    width: 213px;
+    height: 56px;
+    background-color: var(--button-red);
+    border: none;
+    border-radius: 4px;
+    font-size: 24px;
+    font-weight: 650;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;cursor: pointer;
+}
+.getstarted> :nth-child(2):hover{
+    background-color: var(--button-hover-red);
+    cursor: pointer;
+}
+
+
